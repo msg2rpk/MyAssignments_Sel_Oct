@@ -11,7 +11,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DropDownTestFb {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 	 
 		WebDriverManager.chromedriver().setup();
 		
@@ -58,6 +58,9 @@ public class DropDownTestFb {
 		elementSex.click();
 		
 
+		Thread.sleep(5000);
+		
+		driver.close();
 	}
 
 }
