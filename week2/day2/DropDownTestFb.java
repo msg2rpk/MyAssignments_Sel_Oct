@@ -5,6 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.v106.network.Network;
 import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -17,6 +18,9 @@ public class DropDownTestFb {
 		
 		// Open a chrome browser
 		ChromeDriver driver = new ChromeDriver();
+		
+		 //driver.getDevTools().createSessionIfThereIsNotOne();
+		 //driver.getDevTools().send(Network.clearBrowserCookies());
 		
 		// Load the URL to test
 		driver.get("https://en-gb.facebook.com/");
@@ -37,14 +41,14 @@ public class DropDownTestFb {
 		elementLastName.sendKeys("Kumar");
 		
 		WebElement elementMobile = driver.findElement(By.name("reg_email__"));
-		elementMobile.sendKeys("123456789");
+		elementMobile.sendKeys("987654310");
 		
 		WebElement elementPwd = driver.findElement(By.id("password_step_input"));
-		elementFirstName.sendKeys("Password@1234");
+		elementPwd.sendKeys("Password@1234");
 		
 		WebElement elementDay = driver.findElement(By.id("day"));
 		Select dd1 = new Select(elementDay);
-		dd1.selectByVisibleText("1");
+		dd1.selectByVisibleText("2");
 		
 		WebElement elementMonth = driver.findElement(By.id("month"));
 		Select dd2 = new Select(elementMonth);
